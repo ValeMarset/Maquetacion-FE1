@@ -141,6 +141,7 @@ main > article:first-child {
   padding: 0.7rem 1.5rem 0.7rem 1.5rem;
   margin-right: 0.3rem;
 }
+
 .h4-section {
   padding: 0.7rem 0;
   margin-top: 4rem;
@@ -221,7 +222,7 @@ form button:hover {
   background-color: var(--color-main-violet-opacity);
   cursor: pointer;
 }
-#mesagge {
+#message {
   border-radius: 50px;
   padding: 0.8rem 1.2rem;
   border: 0;
@@ -294,6 +295,7 @@ ul.footer-list a:hover {
   }
 
   /* Header */
+
   header {
     display: flex;
     padding: 5rem 0;
@@ -436,7 +438,7 @@ ul.footer-list a:hover {
     bottom: 1.5rem;
     right: 2rem;
   }
-  #mesagge {
+  #message {
     width: 230px;
   }
   .list-desk {
