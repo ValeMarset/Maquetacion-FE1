@@ -134,20 +134,23 @@ main > article:first-child {
 }
 
 /* Section Badges*/
-.badge-numerical-section {
-  border-radius: 50px;
-  text-decoration: none;
-  color: white;
-  padding: 0.7rem 1.5rem 0.7rem 1.5rem;
-  margin-right: 0.3rem;
-}
 
-.h4-section {
+.h4-section-badge {
   padding: 0.7rem 0;
   margin-top: 4rem;
   margin-left: 2rem;
   border-radius: 50px 0 0 50px;
   background-color: var(--color-main-violet-opacity);
+}
+
+.h4-section-badge::before {
+  content: "0" attr(num-badge);
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+  margin-right: 0.3rem;
+  background-color: #8b48bf;
 }
 
 .p-badge {
@@ -353,14 +356,14 @@ ul.footer-list a:hover {
     margin-left: auto;
     margin-top: 4rem;
   }
-  .h4-section {
+  .h4-section-badge {
     margin-left: 0;
     background-color: transparent;
     padding: 0;
     margin: 0;
   }
   .p-badge {
-    margin: 1rem 2rem 0 76px;
+    margin: 1rem 2rem 0 77px;
   }
 
   /* Section Best of the mont */
