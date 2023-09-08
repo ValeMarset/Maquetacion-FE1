@@ -4,9 +4,13 @@
   padding: 0;
 }
 :root {
-  --color-main: #8b48bf;
-  --color-main-opacity: rgba(139, 72, 191, 0.3);
-  --color-secondary: #3cddf3;
+  --color-main-violet: #8b48bf;
+  --color-main-violet-opacity: rgba(139, 72, 191, 0.3);
+  --color-secondary-scayblue: #3cddf3;
+  --color-blue-dark: #232c50;
+  --color-grey-light: rgb(249, 249, 249);
+  --color-grey: #b9b9c1;
+  --color-black: #1e1e26;
 }
 body {
   font-family: "Be Vietnam Pro", sans-serif;
@@ -19,18 +23,6 @@ body {
 .d-flex {
   display: flex;
 }
-.d-block {
-  display: block;
-}
-.d-inline-block {
-  display: inline-block;
-}
-.d-none {
-  display: none;
-}
-.flex-column {
-  flex-direction: column;
-}
 .justify-content-center {
   justify-content: center;
 }
@@ -40,14 +32,8 @@ body {
 .justify-content-end {
   justify-content: flex-end;
 }
-.align-items-center {
-  align-items: center;
-}
 .text-center {
   text-align: center;
-}
-.fw-bold {
-  font-weight: bold;
 }
 .fw-normal {
   font-weight: normal;
@@ -56,31 +42,19 @@ body {
   color: white;
 }
 .text-grey {
-  color: #b3b2b7;
+  color: var(--color-grey);
 }
 .text-blue {
-  color: #232c50;
+  color: var(--color-blue-dark);
 }
 .text-right {
   text-align: right;
 }
 .bg-main {
-  background-color: var(--color-main);
-}
-.bg-main-opacity {
-  background-color: var(--color-main-opacity);
-}
-.bg-secondary {
-  background-color: var(--color-secondary);
-}
-.bg-blue {
-  background-color: #232c50;
+  background-color: var(--color-main-violet);
 }
 .bg-light {
-  background-color: #fafafa;
-}
-.rounded {
-  border-radius: 50px;
+  background-color: var(--color-grey-light);
 }
 .container {
   max-width: 650px;
@@ -89,12 +63,6 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-.w-100 {
-  width: 100%;
-}
-.h {
-  height: 100%;
-}
 
 .btn {
   border-radius: 50px;
@@ -102,9 +70,11 @@ body {
   color: white;
   padding: 0.8rem 2.8rem;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
 }
 .btn:hover {
-  background-color: rgba(139, 72, 191, 0.7);
+  background-color: var(--color-main-violet-opacity);
 }
 
 /* Clases específicas */
@@ -154,7 +124,7 @@ h1 + p {
 }
 
 main > article:first-child {
-  background-color: var(--color-secondary);
+  background-color: var(--color-secondary-scayblue);
 }
 
 .p-article {
@@ -176,7 +146,7 @@ main > article:first-child {
   margin-top: 4rem;
   margin-left: 2rem;
   border-radius: 50px 0 0 50px;
-  background-color: var(--color-main-opacity);
+  background-color: var(--color-main-violet-opacity);
 }
 
 .p-badge {
@@ -223,24 +193,24 @@ main > article:first-child {
 
 .article-the-best-team {
   padding: 0.5rem 2rem 4rem 2rem;
-  background-color: var(--color-secondary);
+  background-color: var(--color-secondary-scayblue);
 }
 .go-for-it {
   margin-top: 1rem;
 }
 .btn-go-for-it {
-  background-color: #232c50;
+  background-color: var(--color-blue-dark);
 }
 .btn-go-for-it:hover {
   background-color: white;
-  color: var(--color-secondary);
+  color: var(--color-secondary-scayblue);
 }
 
 /* Footer */
 
 footer {
-  background-color: #1e1e26;
-  padding: 3rem;
+  background-color: var(--color-black);
+  padding: 2rem;
 }
 form {
   margin-right: 0.5rem;
@@ -248,7 +218,7 @@ form {
 }
 
 form button:hover {
-  background-color: rgba(139, 72, 191, 0.7);
+  background-color: var(--color-main-violet-opacity);
   cursor: pointer;
 }
 #mesagge {
@@ -258,12 +228,14 @@ form button:hover {
   width: 90%;
 }
 
-#mesagge + button {
+form button {
   border-radius: 50px;
   color: white;
   padding: 0.8rem 1.3rem;
   border: 0;
   margin-left: 10px;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
 }
 
 .footer-list {
@@ -289,7 +261,7 @@ ul.footer-list a {
   text-decoration: none;
 }
 ul.footer-list a:hover {
-  color: #b3b2b7;
+  color: var(--color-grey);
 }
 .container-list-mobile {
   display: flex;
@@ -299,13 +271,6 @@ ul.footer-list a:hover {
   display: none;
 }
 /* 
-Tablet
-@media screen and (min-width: 500px) and (max-width: 1199px) {
-  body{background-color: salmon;
-  .container {
-    max-width: 960px;
-  }
-} */
 
 /* Desktop */
 
@@ -352,7 +317,7 @@ Tablet
 
   /* Article */
   main > article:first-child {
-    background-color: var(--color-main);
+    background-color: var(--color-main-violet);
   }
   main > article:first-child > div:first-child {
     display: flex;
@@ -398,7 +363,7 @@ Tablet
 
   /* Section Best of the mont */
   .section-best-of-the-month {
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
   }
 
   .h2-best-of-the-month {
@@ -416,16 +381,19 @@ Tablet
 
   /* Article the beast team */
   .article-the-best-team {
-    background-color: var(--color-main);
+    background-color: var(--color-main-violet);
     padding: 3rem 0;
   }
   .btn-go-for-it {
     background-color: white;
-    color: var(--color-main);
+    color: var(--color-main-violet);
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
   }
   .btn-go-for-it:hover {
-    background-color: #ae7fd2;
+    background-color: var(--color-main-violet-opacity);
     color: white;
+    transform: scale(1.1);
   }
   .article-the-best-team div:first-child {
     display: flex;
@@ -487,7 +455,7 @@ Tablet
 
 .nav-list li a {
   text-decoration: none;
-  color: #232c50;
+  color: var(--color-blue-dark);
   margin-right: 2.2rem;
 }
 .nav-list li a:hover {
