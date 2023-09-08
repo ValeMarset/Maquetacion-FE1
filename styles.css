@@ -396,7 +396,7 @@ ul.footer-list a:hover {
     transition-duration: 0.5s;
   }
   .btn-go-for-it:hover {
-    background-color: var(--color-main-violet-opacity);
+    background-color: rgb(220, 200, 236);
     color: white;
     transform: scale(1.1);
   }
